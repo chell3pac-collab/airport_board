@@ -1,0 +1,205 @@
+.board {
+    &__add-section {
+        padding: 0 55px 22px 45px;
+        overflow: visible;
+
+        @media (max-width: 768px) {
+            padding: 16px 20px 41px 32px;
+        }
+
+        @media (max-width: 376px) {
+            padding: 0 35px 29px 10px;
+        }
+    }
+
+    &__add-title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 22px;
+
+        @media (max-width: 376px) {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 19px;
+        }
+    }
+
+
+}
+
+.add-form {
+
+    &__wrapper {
+        display: flex;
+        gap: 11px 6px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+
+        @media (max-width: 768px) {
+            gap: 12px;
+        }
+
+        @media (max-width: 376px) {
+            margin-bottom: 20px;
+        }
+    }
+
+
+    &__group {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        &--flex-1 {
+            width: 124px;
+        }
+
+        &--flex-2 {
+            width: 119px;
+        }
+
+        &--flex-3 {
+            width: 201px;
+        }
+
+        &--flex-4 {
+            width: 91px;
+        }
+
+        &--flex-5 {
+            width: 157px;
+        }
+
+        &--flex-6 {
+            width: 102px;
+        }
+
+        &--flex-7 {
+            width: 123px;
+        }
+    }
+
+
+
+    &__input {
+        height: 32px;
+        padding: 7px 0 8px 12px;
+        border: 1px solid $color-blue-grey;
+        border-radius: 6px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 21.75px;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    &__input::placeholder {
+        color: $color-blue-green;
+    }
+
+    &__select {
+        height: 32px;
+        padding: 5px 0 5px 12px;
+        font-size: 14px;
+        border: 1px solid $color-blue-grey;
+        border-radius: 6px;
+        color: $color-blue-green;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 21.75px;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+
+        & option {
+            color: $color-black;
+        }
+
+        & option:checked {
+            color: $color-deep-green;
+        }
+
+        & option[value="Прибыл"] {
+            color: $color-deep-green;
+        }
+
+        & option[value="Посадка"] {
+            color: $color-blue-azure;
+        }
+
+        & option[value="В полёте"] {
+            color: $color-blue-azure;
+        }
+
+        & option[value="Отменён"] {
+            color: $color-scarlet;
+        }
+
+        & option[value="Задерживается"] {
+            color: $color-scarlet;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        right: 12px;
+        top: 14px;
+        pointer-events: none;
+    }
+
+    &__btn {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 11px 0;
+        color: $color-white;
+        background: $color-blue-azure;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        width: 123px;
+
+        &:hover {
+            background-color: $color-deep-green;
+        }
+
+        @media (max-width: 768px) {
+            width: 157px;
+        }
+
+        @media (max-width: 376px) {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+
+    &__group.has-error .form-error-message {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__group.has-error .add-form__input,
+    &__group.has-error .add-form__select {
+        border-color: $color-scarlet;
+    }
+}
+
+.form-error-message {
+    position: absolute;
+    bottom: calc(100% + 1px);
+    left: 0;
+    color: $color-scarlet;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+    pointer-events: none;
+}

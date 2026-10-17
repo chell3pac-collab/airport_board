@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-табло — Администратор</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page page--admin">
+    <main class="board">
+        <header class="board__header">
+            <div class="board__header-left">
+                <h1 class="board__title board__title--admin">Онлайн-табло</h1>
+                <button class="board__edit-btn" id="editBtn">редактирование</button>
+            </div>
+            <div class="board__header-right">
+                <button class="board__save-btn" id="saveBtn">Сохранить изменения</button>
+            </div>
+        </header>
+
+        <section class="board__search">
+            <h2 class="board__search-title visually-hidden">Поиск</h2>
+            <div class="search">
+                <svg class="search__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <circle cx="9" cy="9" r="7" stroke="#999" stroke-width="1.5" />
+                    <line x1="14" y1="14" x2="18" y2="18" stroke="#999" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                <label for="searchInput" class="search__label visually-hidden">Поиск по направлению</label>
+                <input type="text" class="search__input" id="searchInput" placeholder="Поиск по направлению"
+                    aria-label="Поиск по направлению">
+            </div>
+        </section>
+
+        <section class="board__add-section">
+            <h2 class="board__add-title">Добавить рейс</h2>
+            <form class="add-form" id="addForm">
+                <div class="add-form__wrapper">
+                    <div class="add-form__group add-form__group--flex-1">
+                        <label class="add-form__label visually-hidden" for="addDate">Дата</label>
+                        <div class="form-error-message"></div>
+                        <input type="text" class="add-form__input" id="addDate" placeholder="Дата">
+                    </div>
+
+                    <div class="add-form__group add-form__group--flex-2">
+                        <label class="add-form__label visually-hidden" for="addTime">Время</label>
+                        <div class="form-error-message"></div>
+                        <input type="text" class="add-form__input" id="addTime" placeholder="Время">
+                    </div>
+
+                    <div class="add-form__group add-form__group--flex-3">
+                        <label class="add-form__label visually-hidden" for="addDirection">Направление</label>
+                        <div class="form-error-message"></div>
+                        <select class="add-form__select" id="addDirection">
+                            <option value="">Направление</option>
+                            <option value="Москва SVO">Москва SVO</option>
+                            <option value="Сочи">Сочи</option>
+                            <option value="Санкт-Петербург">Санкт-Петербург</option>
+                            <option value="Москва DME">Москва DME</option>
+                            <option value="Анапа">Анапа</option>
+                            <option value="Калининград">Калининград</option>
+                            <option value="Минеральные Воды">Минеральные Воды</option>
+                            <option value="Симферополь">Симферополь</option>
+                            <option value="Екатеринбург">Екатеринбург</option>
+                            <option value="Новосибирск">Новосибирск</option>
+                        </select>
+                        <svg class="add-form__icon" width="12" height="6" viewBox="0 0 12 6" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                        </svg>
+                    </div>
+
+                    <div class="add-form__group add-form__group--flex-4">
+                        <label class="add-form__label visually-hidden" for="addFlight">Рейс</label>
+                        <div class="form-error-message"></div>
+                        <input type="text" class="add-form__input" id="addFlight" placeholder="Рейс">
+                    </div>
+
+                    <div class="add-form__group add-form__group--flex-5">
+                        <label class="add-form__label visually-hidden" for="addAirline">Авиакомпания</label>
+                        <div class="form-error-message"></div>
+                        <select class="add-form__select" id="addAirline">
+                            <option value="">Авиакомпания</option>
+                            <option value="АЭРОФЛОТ">АЭРОФЛОТ</option>
+                            <option value="РОССИЯ">РОССИЯ</option>
+                            <option value="Nordwind">Nordwind</option>
+                            <option value="Ural Airlines">Ural Airlines</option>
+                            <option value="S7 Airlines">S7 Airlines</option>
+                            <option value="Уральские авиалинии">Уральские авиалинии</option>
+                        </select>
+                        <svg class="add-form__icon" width="12" height="6" viewBox="0 0 12 6" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                        </svg>
+                    </div>
+
+                    <div class="add-form__group add-form__group--flex-6">
+                        <label class="add-form__label visually-hidden" for="addStatus">Статус</label>
+                        <div class="form-error-message"></div>
+                        <select class="add-form__select" id="addStatus">
+                            <option value="">Статус</option>
+                            <option value="Прибыл">Прибыл</option>
+                            <option value="Посадка">Посадка</option>
+                            <option value="В полёте">В полёте</option>
+                            <option value="Отменён">Отменён</option>
+                            <option value="Задерживается">Задерживается</option>
+                            <option value="Регистрация">Регистрация</option>
+                        </select>
+                        <svg class="add-form__icon" width="12" height="6" viewBox="0 0 12 6" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                        </svg>
+                    </div>
+
+                    <div class="add-form__group add-form__group--flex-7">
+                        <label class="add-form__label visually-hidden" for="addType">Тип</label>
+                        <div class="form-error-message"></div>
+                        <select class="add-form__select" id="addType">
+                            <option value="">Тип</option>
+                            <option value="Вылет">Вылет</option>
+                            <option value="Прилёт">Прилёт</option>
+                        </select>
+                        <svg class="add-form__icon" width="12" height="6" viewBox="0 0 12 6" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                        </svg>
+                    </div>
+                </div>
+                <button type="submit" class="add-form__btn" id="addBtn">Добавить</button>
+            </form>
+        </section>
+
+
+        <nav class="board__tabs" >
+            <button class="board__tab board__tab--active" data-type="Вылет" id="tabDeparture">Вылет</button>
+            <button class="board__tab" data-type="Прилёт" id="tabArrival">Прилёт</button>
+        </nav>
+
+        <section class="board__table-section">
+            <h2 class="board__table-title visually-hidden">Информация о полёте</h2>
+            <table class="board__table" id="flightsTable">
+                <thead class="board__thead">
+                    <tr class="board__row board__row--admin board__row--header">
+                        <th class="board__cell board__cell--header board__cell--header-date">Дата</th>
+                        <th class="board__cell board__cell--header board__cell--header-time">Время</th>
+                        <th class="board__cell board__cell--header board__cell--header-direction">Направление</th>
+                        <th class="board__cell board__cell--header board__cell--header-flight">Рейс</th>
+                        <th class="board__cell board__cell--header board__cell--header-airline board__cell--airline">
+                            Авиакомпания</th>
+                        <th class="board__cell board__cell--header board__cell--header-status">Статус</th>
+                        <th class="board__cell board__cell--header board__cell--hidden" id="editHeader"></th>
+                    </tr>
+                </thead>
+                <tbody class="board__tbody" id="flightsBody">
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

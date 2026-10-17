@@ -1,0 +1,16 @@
+
+
+// --- global ---
+@import './global/variables';
+@import './global/reboot';
+@import './global/visually-hidden';
+@import './global/normalize';
+@import './global/fonts';
+
+// --- blocks ---
+@import './blocks/board';
+@import './blocks/search';
+@import './blocks/add-form';
+@import './blocks/tabs';
+@import './blocks/table';
+@import './blocks/edit-mode';

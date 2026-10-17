@@ -1,0 +1,183 @@
+.board {
+    width: 100%;
+    max-width: 984px;
+    background: $color-light-gray-blue;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0 auto;
+
+    &--user {
+        background-color: $color-white;
+
+        @media (max-width: 768px) {
+            max-width: 768px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 57px 56px 29px 45px;
+        background: $color-light-gray-blue;
+
+        @media (max-width: 845px) {
+            padding: 59px 20px 19px 32px;
+        }
+
+        @media (max-width: 680px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        @media (max-width: 455px) {
+            padding: 26px 15px 32px 7px;
+            gap: 27px;
+        }
+    }
+
+    &__header--user {
+        padding: 57px 50px 32px 50px;
+        background-color: $color-white;
+
+        @media (max-width: 768px) {
+            padding: 59px 20px 22px 32px;
+        }
+
+        @media (max-width: 600px) {
+            padding: 26px 10px 0;
+        }
+    }
+
+    &__header-left {
+        display: flex;
+        align-items: baseline;
+        gap: 17px;
+
+        @media (max-width: 845px) {
+            gap: 10px;
+        }
+
+        @media (max-width: 757px) {
+            gap: 5px;
+        }
+
+        @media (max-width: 400px) {
+            flex-direction: column;
+            gap: 3px;
+        }
+    }
+
+    &__header-right {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 600px) {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 40px;
+        margin: 0;
+
+        @media (max-width: 600px) {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+
+    &__title--admin {
+        @media (max-width: 1024px) {
+            font-size: 32px;
+            line-height: 36px;
+        }
+
+        @media (max-width: 800px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: 777px) {
+            font-size: 32px;
+            line-height: 34px;
+        }
+
+        @media (max-width: 710px) {
+            font-size: 28px;
+            line-height: 32px;
+        }
+
+        @media (max-width: 430px) {
+            font-size: 24px;
+            line-height: 28px;
+            margin-left: 3px;
+        }
+
+    }
+
+    &__edit-btn {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        color: $color-blue-green;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+
+        @media (max-width: 1024px) {
+            font-size: 20px;
+            line-height: 20px;
+        }
+
+        @media (max-width: 980px) {
+            font-size: 18px;
+        }
+
+        @media (max-width: 940px) {
+            font-size: 14px;
+        }
+
+        @media (max-width: 376px) {
+            font-size: 12px;
+            line-height: 16px;
+            text-transform: lowercase;
+        }
+    }
+
+    &__save-btn {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        width: 242px;
+        color: $color-white;
+        background: $color-blue-azure;
+        border: none;
+        border-radius: 6px;
+        padding: 12px 0 10px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-deep-green;
+        }
+
+        @media (max-width: 746px) {
+            font-size: 14px;
+            width: 200px;
+        }
+
+        @media (max-width: 600px) {
+            width: 100%;
+        }
+
+        @media (max-width: 376px) {
+            height: 36px;
+            font-size: 12px;
+            line-height: 16px;
+            padding: 10px 0;
+        }
+    }
+}

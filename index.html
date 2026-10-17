@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-табло аэропорта</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+    <main class="board board--user">
+        <header class="board__header board__header--user">
+            <div class="board__header-left">
+                <h1 class="board__title">Онлайн-табло</h1>
+            </div>
+        </header>
+
+        <section class="board__search board__search--user">
+            <h2 class="board__search-title visually-hidden">Поиск</h2>
+            <div class="search search--user">
+                <svg class="search__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <circle cx="9" cy="9" r="7" stroke="#999" stroke-width="1.5"/>
+                    <line x1="14" y1="14" x2="18" y2="18" stroke="#999" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <label for="searchInput" class="search__label visually-hidden">Поиск по направлению</label>
+                <input type="text" class="search__input" id="searchInput" placeholder="Поиск по направлению" aria-label="Поиск по направлению">
+            </div>
+        </section>
+
+        <nav class="board__tabs board__tabs--user">
+            <button class="board__tab board__tab--active" data-type="Вылет" id="tabDeparture">Вылет</button>
+            <button class="board__tab" data-type="Прилёт" id="tabArrival">Прилёт</button>
+        </nav>
+
+        <section class="board__table-section board__table-section--user">
+            <h2 class="board__table-title visually-hidden">Информация о полёте</h2>
+            <table class="board__table" id="flightsTable">
+                <thead class="board__thead">
+                    <tr class="board__row board__row--user board__row--header">
+                        <th class="board__cell board__cell--header board__cell--user-data">Дата</th>
+                        <th class="board__cell board__cell--header board__cell--user-time">Время</th>
+                        <th class="board__cell board__cell--header board__cell--user-direction">Направление</th>
+                        <th class="board__cell board__cell--header board__cell--user-flight">Рейс</th>
+                        <th class="board__cell board__cell--header board__cell--airline board__cell--airline-user">Авиакомпания</th>
+                        <th class="board__cell board__cell--header board__cell--user-status">Статус</th>
+                    </tr>
+                </thead>
+                <tbody class="board__tbody board__tbody--user" id="flightsBody">
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

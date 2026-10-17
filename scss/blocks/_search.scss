@@ -1,0 +1,96 @@
+.board__search {
+    padding: 0 55px 39px 45px;
+
+    @media (max-width: 768px) {
+            padding: 16px 20px 20px 32px;
+        }
+
+        @media (max-width: 376px) {
+            padding: 0 10px 31px 10px;
+        }
+
+    &--user {
+        padding: 0 50px 10px 50px;
+        background-color: $color-white;
+
+        @media (max-width: 768px) {
+            padding: 16px 20px 20px 32px;
+        }
+
+        @media (max-width: 600px) {
+            padding: 19px 10px 8px 10px;
+        }
+    }
+}
+
+.search {
+    position: relative;
+    width: 100%;
+    max-width: 884px;
+
+    @media (max-width: 768px) {
+        height: 50px;
+    }
+
+    @media (max-width: 600px) {
+        height: 40px;
+    }
+
+    &__icon {
+        position: absolute;
+        left: 17px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+
+        @media (max-width: 768px) {
+            width: 24px;
+            height: 24px;
+        }
+
+        @media (max-width: 600px) {
+            width: 16px;
+            height: 16px;
+        }
+
+        @media (max-width: 376px) {
+            left: 13px;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        padding: 10px 16px 10px 45px;
+        border: 1px solid $color-white;
+        border-radius: 6px;
+        background: $color-white;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 21.75px;
+        outline: none;
+
+        @media (max-width: 768px) {
+            height: 100%;
+            font-size: 21px;
+            padding-left: 49px;
+        }
+
+
+        @media (max-width: 600px) {
+            font-size: 14px;
+            line-height: 21.75px;
+        }
+        
+        @media (max-width: 376px) {
+        padding-left: 37px;    
+        }
+    }
+
+    &--user &__input {
+        background-color: $color-light-gray-blue;
+    }
+
+    &__input::placeholder {
+        color: $color-blue-green;
+    }
+}

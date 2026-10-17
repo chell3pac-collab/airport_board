@@ -1,0 +1,433 @@
+.board__table-section {
+    padding: 24px 50px 0 45px;
+    background-color: $color-white;
+    height: 100%;
+
+
+
+    @media (max-width: 768px) {
+        padding: 24px 20px 0 32px;
+    }
+
+    @media (max-width: 376px) {
+        padding: 0 12px 0 12px;
+    }
+
+    &--user {
+        padding: 25px 50px 0 50px;
+
+        @media (max-width: 768px) {
+            padding: 24px 20px 0 32px;
+        }
+
+        @media (max-width: 600px) {
+            padding: 0 12px 0 12px;
+        }
+    }
+}
+
+.board__table {
+    width: 100%;
+    border-collapse: collapse;
+    background: $color-white;
+    overflow: hidden;
+
+    &--editing .board__cell--hidden {
+        display: table-cell;
+    }
+
+    &--editing .board__cell--header-status {
+        padding-left: 10px;
+        padding-right: 141px;
+    }
+
+    &--editing .board__cell--airline {
+        padding-right: 29px;
+    }
+
+    &--editing .board__cell--hidden {
+        padding: 0;
+    }
+
+    &--editing .mobile-card {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    &--editing .mobile-card__status {
+        text-align: left;
+    }
+}
+
+.board__row {
+    border-bottom: 1px solid $color-light-blue-grey;
+
+    &--header:last-child {
+        border: none;
+    }
+
+    &--admin {
+        @media (max-width: 680px) {
+            display: none;
+        }
+    }
+
+    &--user {
+        @media (max-width: 600px) {
+            display: none;
+        }
+    }
+}
+
+.board__cell {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26.1px;
+    color: $color-black;
+    white-space: nowrap;
+
+    @media (max-width: 768px) {
+        font-size: 17px;
+    }
+
+    &--user {
+        padding: 6px 0 8px 0;
+
+        @media (max-width: 768px) {
+            padding: 9px 0 9px 0;
+        }
+    }
+
+    &--header {
+        text-align: left;
+        white-space: nowrap;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 21.75px;
+        color: $color-blue-green;
+    }
+
+    &--header-date {
+        width: 36px;
+        padding: 0 70px 6px 0;
+
+        @media (max-width: 900px) {
+            padding-right: 50px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 1px 41px 3px 12px;
+        }
+
+        @media (max-width: 750px) {
+            padding-right: 15px;
+        }
+    }
+
+    &--header-time {
+        width: 47px;
+        padding: 0 79px 6px 0;
+
+        @media (max-width: 900px) {
+            padding-right: 30px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 1px 31px 3px 0;
+        }
+
+        @media (max-width: 750px) {
+            padding-right: 10px;
+        }
+
+    }
+
+    &--header-direction {
+        width: 100px;
+        padding: 0 100px 6px 0;
+
+        @media (max-width: 900px) {
+            padding-right: 70px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 1px 76px 3px 0;
+        }
+    }
+
+    &--header-flight {
+        width: 35px;
+        padding: 0 76px 6px 0;
+
+        @media (max-width: 900px) {
+            padding-right: 50px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 1px 73px 3px 0;
+        }
+
+        @media (max-width: 750px) {
+            padding-right: 50px;
+        }
+    }
+
+    &--header-airline {
+        width: 110px;
+        padding: 0 40px 6px 0;
+    }
+
+    &--header-status {
+        width: 49px;
+        padding: 0 162px 6px 0;
+
+        @media (max-width: 768px) {
+            padding: 1px 162px 3px 0;
+        }
+    }
+
+    &--hidden {
+        display: none;
+    }
+
+    &--user-data {
+        width: 36px;
+        padding: 0 95px 5px 11px;
+
+
+        @media (max-width: 900px) {
+            padding-right: 59px;
+        }
+
+        @media (max-width: 710px) {
+            padding-right: 40px;
+        }
+    }
+
+    &--user-time {
+        width: 47px;
+        padding: 0 79px 5px 0;
+
+        @media (max-width: 900px) {
+            padding-right: 48px;
+        }
+
+        @media (max-width: 710px) {
+            padding-right: 20px;
+        }
+    }
+
+    &--user-direction {
+        width: 100px;
+        padding: 0 112px 5px 0;
+
+        @media (max-width: 900px) {
+            padding-right: 93px;
+        }
+
+        @media (max-width: 710px) {
+            padding-right: 60px;
+        }
+    }
+
+    &--user-flight {
+        width: 34px;
+        padding: 0 86px 5px 0;
+
+        @media (max-width: 710px) {
+            padding-right: 60px;
+        }
+    }
+
+    &--user-status {
+        padding: 0 0 5px 0;
+    }
+
+    &--airline-user {
+        width: 110px;
+        padding: 0 36px 5px 0;
+
+        @media (max-width: 710px) {
+            padding-right: 20px;
+        }
+    }
+
+    &--airline {
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &--arrived {
+        font-size: 18px;
+        color: $color-deep-green;
+    }
+
+    &--boarding {
+        font-size: 18px;
+        color: $color-black;
+    }
+
+    &--flying {
+        font-size: 18px;
+        color: $color-blue-azure;
+    }
+
+    &--cancelled {
+        font-size: 18px;
+        color: $color-scarlet;
+    }
+
+    &--delayed {
+        font-style: 18px;
+        color: $color-scarlet;
+    }
+
+    &--registration {
+        font-size: 18px;
+        color: $color-black;
+    }
+
+    &--status {
+        padding: 0;
+    }
+
+    &--mobile-card {
+        padding: 0;
+    }
+}
+
+.board__empty {
+    text-align: center;
+    padding: 40px;
+    font-size: 15px;
+}
+
+.board__logo-img {
+    margin-left: 20px;
+}
+
+.board__tbody--user .board__row {
+    @media (max-width: 600px) {
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 0 13px 0;
+    }
+}
+
+.board__tbody .board__row {
+    height: 45px;
+    @media (max-width: 600px) {
+        height: 86px;
+    }
+}
+
+.table {
+
+    &__cell-wrapper {
+        display: flex;
+        gap: 9px;
+    }
+
+    &__date,
+    &__time,
+    &__flight {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 13.9px;
+    }
+
+    &__direction {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 13.9px;
+    }
+
+    &__cell--info {
+        @media (max-width: 600px) {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    &__cell--status {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        text-align: right;
+    }
+
+    &__status-label {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 13.9px;
+        color: $color-medium-gray;
+    }
+
+    &__status-value {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 13.9px;
+    }
+}
+
+
+.mobile-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0 12px 0;
+
+
+    &__header {
+        display: flex;
+        gap: 9px;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__date,
+    &__time,
+    &__flight {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 13.9px;
+    }
+
+    &__actions  {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__status {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 13.9px;
+        color: $color-medium-gray;
+        text-align: right;
+    }
+
+    &__direction {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 13.9px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+.mobile-status-badge {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 13.9px;
+}

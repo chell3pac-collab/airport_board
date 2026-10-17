@@ -1,0 +1,53 @@
+.board__tabs {
+    display: flex;
+    gap: 28px;
+    padding: 20px 55px 0 45px;
+    border-bottom: 1px solid $color-blue-grey;
+    background-color: $color-white;
+
+    @media (max-width: 768px) {
+            padding: 24px 20px 0 32px;
+        }
+
+        @media (max-width: 376px) {
+            padding: 18px 10px 0 10px;
+            gap: 8px;
+        }
+
+    &--user {
+        padding: 20px 50px 0 50px;
+
+        @media (max-width: 768px) {
+            padding: 17px 20px 0 32px;
+        }
+
+        @media (max-width: 600px) {
+            padding: 22px 10px 0 10px;
+            gap: 8px;
+        }
+    }
+}
+
+.board__tab {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: $color-blue-azure;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 10px 0 13px;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+
+    &--active {
+        color: $color-black;
+        border-bottom-color: $color-black;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 14px;
+        line-height: 18px;
+        padding-bottom: 6px;
+    }
+}

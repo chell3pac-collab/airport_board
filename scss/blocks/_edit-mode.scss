@@ -1,0 +1,73 @@
+.status-select {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26.1px;
+    padding-left: 9px;
+    border: 1px solid $color-blue-green;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    width: 194px;
+    height: 32px;
+
+    @media (max-width: 768px) {
+        width: 190px;
+        font-size: 18px;
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+    &__icon {
+        position: absolute;
+        left: 169px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+
+        @media (max-width: 768px) {
+            left: 164px;
+            transform: translateY(-25%);
+        }
+    }
+}
+
+.status-select.board__cell--arrived {
+    color: $color-deep-green;
+}
+
+.status-select.board__cell--boarding {
+    color: $color-black;
+}
+
+.status-select.board__cell--flying {
+    color: $color-blue-azure;
+}
+
+.status-select.board__cell--cancelled {
+    color: $color-scarlet;
+}
+
+.status-select.board__cell--delayed {
+    color: $color-scarlet;
+}
+
+.status-select.board__cell--registration {
+    color: $color-black;
+}
+
+.delete-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 29px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+}
